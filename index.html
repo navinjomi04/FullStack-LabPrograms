@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLR GridlockPulse - Crowdsourced Traffic Hub</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tailwind Typography Plugin -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <!-- Google Fonts for premium tech look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -20,10 +16,8 @@
 </head>
 <body class="bg-slate-950 text-slate-100 selection:bg-red-500 selection:text-white antialiased">
 
-    <!-- HEADER NAVIGATION (TOP FLEXBOX) -->
     <header class="bg-slate-950/75 backdrop-blur-xl fixed top-0 left-0 right-0 z-50 border-b border-white/10">
         <nav class="container mx-auto max-w-7xl flex justify-between items-center p-4 md:px-8">
-            <!-- Brand Logo -->
             <div class="flex items-center space-x-3">
                 <div class="bg-gradient-to-tr from-red-600 to-amber-500 text-white p-2.5 rounded-xl shadow-lg shadow-red-600/20">
                     <i class="fas fa-traffic-light text-lg"></i>
@@ -33,7 +27,6 @@
                 </span>
             </div>
             
-            <!-- Links mapping out your specific multi-page journey ideas -->
             <ul class="hidden md:flex items-center space-x-8 font-semibold text-sm text-slate-300">
                 <li><a href="#hero" class="hover:text-red-400 transition-colors">Home</a></li>
                 <li><a href="report.html" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
@@ -45,7 +38,6 @@
                 <li><a href="#about" class="hover:text-red-400 transition-colors">About System</a></li>
             </ul>
 
-            <!-- Call to Action Button linking to user flow -->
             <div class="hidden md:block">
                 <a href="navigate.html" class="bg-red-600 hover:bg-red-500 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-all shadow-md shadow-red-600/20">
                     Bypass Jams
@@ -54,105 +46,91 @@
         </nav>
     </header>
 
-    <!-- MAIN BODY CONTAINER -->
     <main class="container mx-auto max-w-7xl px-4 md:px-8 pt-28 pb-16 space-y-24">
 
-        <!-- 1. FULL-SCREEN COVER ARCHITECTURE HERO SECTION -->
         <section id="hero" class="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-950/40 border border-white/5">
-            <!-- Background Image Asset (traffic-image1.jpg) covering the hero panel -->
-            <img src="images/traffic-image1.jpg" alt="Bengaluru Jam Profile" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.35] contrast-125 scale-100">
-            <!-- Dark Overlay Gradient -->
+            <img src="images/traffic-image1.jpg" alt="Bengaluru Jam Profile" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.35] contrast-125">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/60"></div>
 
-            <!-- Content Card Grid -->
             <div class="relative z-10 p-8 md:p-20 text-center md:text-left max-w-3xl space-y-6">
                 <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/20 text-yellow-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-inner">
-                    <i class="fas fa-users mr-1"></i> 100% Crowdsourced Urban Platform
+                    <i class="fas fa-users mr-1"></i> 100% Crowdsourced Hub
                 </span>
                 <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
                     Navigate Bengaluru <br class="hidden md:inline">
                     <span class="bg-gradient-to-r from-red-500 to-amber-400 bg-clip-text text-transparent">On Your Own Terms.</span>
                 </h1>
                 <p class="text-slate-300 text-base md:text-lg font-medium leading-relaxed max-w-xl">
-                    A community-led data matrix where drivers drop live map markers to flag jams, verify road incidents, and discover dynamic alternate paths safely.
+                    A community-led data matrix. Tap on the red active gridlock markers across our live urban workspace to verify delays instantly.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
-                    <a href="report.html" class="bg-red-600 hover:bg-red-500 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-red-600/30 transition-all flex items-center gap-2">
-                        <i class="fas fa-map-pin"></i> Go To Report Page
-                    </a>
-                    <a href="navigate.html" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 font-bold text-sm px-8 py-4 rounded-xl transition-all flex items-center gap-2">
-                        <i class="fas fa-route"></i> Go To Journey Planner
+                    <a href="#live-map" class="bg-red-600 hover:bg-red-500 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-red-600/30 transition-all flex items-center gap-2">
+                        <i class="fas fa-map-marked-alt"></i> View Live Congestion Map
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 2. LIVE BOTTLENECK PICTURE SNAPSHOTS (Using remaining 3 image assets) -->
-        <section id="snapshots" class="space-y-8">
+        <section id="live-map" class="space-y-6 scroll-mt-24">
             <div class="text-center max-w-xl mx-auto space-y-2">
-                <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Active Commuter Reports Feed</h2>
-                <p class="text-slate-400 text-sm">Real visual congestion pins reported on the ground right now across critical arteries.</p>
+                <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">Active Gridlock Track Interface</h2>
+                <p class="text-slate-400 text-sm">Click any red indicator pin below to reveal full metadata submitted by real drivers.</p>
             </div>
 
-            <!-- 3-Column Layout containing your uploaded pictures -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card Item 1 (traffic-image2.jpg) -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-white/5 shadow-xl group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/traffic-image2.jpg" alt="Bengaluru Road Log" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-red-500/20 backdrop-blur-md text-red-400 border border-red-500/30 font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md">
-                            <i class="fas fa-circle-exclamation mr-1"></i> Bumper to Bumper
-                        </span>
+            <div class="relative w-full h-[450px] bg-slate-900 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                <img src="images/traffic-image2.jpg" alt="Bengaluru Street Grid" class="w-full h-full object-cover opacity-40 filter saturate-50 blur-[1px]">
+                <div class="absolute inset-0 bg-slate-950/40"></div>
+
+                <button onclick="showInfo('Silk Board Underpass', '🔴 Stationary (Critical Link)', '35 Minutes', '10 mins ago', 'Heavy commercial container queue bottlenecking parallel exit ramps.', 'images/traffic-image3.jpg')" 
+                        class="absolute top-1/3 left-1/4 group transform -translate-x-1/2 -translate-y-1/2 focus:outline-none z-20">
+                    <div class="relative flex items-center justify-center">
+                        <span class="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-red-500 opacity-75"></span>
+                        <i class="fas fa-location-pin text-3xl text-red-600 drop-shadow-lg group-hover:scale-125 transition duration-200"></i>
                     </div>
-                    <div class="p-5 space-y-2">
-                        <div class="flex justify-between items-center text-[11px] text-slate-500 font-bold">
-                            <span>PIN ID: #29401</span>
-                            <span>4 mins ago</span>
+                </button>
+
+                <button onclick="showInfo('Outer Ring Road (ORR) Corridor', '🟡 Slow Moving Crawl', '20 Minutes', '4 mins ago', 'Metro construction blockades causing sudden single-lane distribution funneling.', 'images/traffic-image1.jpg')" 
+                        class="absolute top-1/2 right-1/3 group transform -translate-x-1/2 -translate-y-1/2 focus:outline-none z-20">
+                    <div class="relative flex items-center justify-center">
+                        <span class="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-amber-500 opacity-75"></span>
+                        <i class="fas fa-location-pin text-3xl text-amber-500 drop-shadow-lg group-hover:scale-125 transition duration-200"></i>
+                    </div>
+                </button>
+
+                <button onclick="showInfo('Hebbal Flyover Entry Loop', '🔴 Stationary (Bumper to Bumper)', '45 Minutes', '18 mins ago', 'Stalled public bus holding up northbound merging traffic lines.', 'images/traffic-image4.jpg')" 
+                        class="absolute bottom-1/3 left-1/2 group transform -translate-x-1/2 -translate-y-1/2 focus:outline-none z-20">
+                    <div class="relative flex items-center justify-center">
+                        <span class="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-red-500 opacity-75"></span>
+                        <i class="fas fa-location-pin text-3xl text-red-600 drop-shadow-lg group-hover:scale-125 transition duration-200"></i>
+                    </div>
+                </button>
+
+                <div id="info-modal" class="hidden absolute bottom-6 left-6 right-6 md:right-auto md:w-[420px] bg-slate-900/95 backdrop-blur-md border border-white/15 p-5 rounded-2xl shadow-2xl z-30 animate-fade-in">
+                    <div class="flex gap-4">
+                        <div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 border border-white/10">
+                            <img id="modal-img" src="" alt="Incident Spot Visual" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="text-base font-bold text-white">Outer Ring Road (ORR) Corridor</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed">Heavy vehicle accumulation causing deep delays near central lanes. Tap to inspect pin data.</p>
+                        <div class="space-y-1 flex-1">
+                            <div class="flex justify-between items-start">
+                                <h4 id="modal-title" class="text-sm font-extrabold text-white">Location Name</h4>
+                                <button onclick="closeInfo()" class="text-slate-400 hover:text-white text-xs"><i class="fas fa-xmark"></i></button>
+                            </div>
+                            <p id="modal-severity" class="text-[11px] font-bold text-red-400">Severity State</p>
+                            <div class="grid grid-cols-2 gap-1 py-1 text-[10px] text-slate-400 font-semibold">
+                                <div><i class="fas fa-clock text-slate-500 mr-1"></i> Delay: <span id="modal-delay" class="text-white"></span></div>
+                                <div><i class="fas fa-history text-slate-500 mr-1"></i> Filed: <span id="modal-time" class="text-white"></span></div>
+                            </div>
+                            <p id="modal-notes" class="text-[11px] text-slate-300 leading-relaxed pt-1 border-t border-white/5">Incident notes details.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card Item 2 (traffic-image3.jpg) -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-white/5 shadow-xl group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/traffic-image3.jpg" alt="Bengaluru Commuter View" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-amber-500/20 backdrop-blur-md text-amber-400 border border-amber-500/30 font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md">
-                            <i class="fas fa-clock mr-1"></i> Slow Crawl
-                        </span>
-                    </div>
-                    <div class="p-5 space-y-2">
-                        <div class="flex justify-between items-center text-[11px] text-slate-500 font-bold">
-                            <span>PIN ID: #29388</span>
-                            <span>12 mins ago</span>
-                        </div>
-                        <h4 class="text-base font-bold text-white">Silk Board Flyover Approach</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed">Two-wheeler congestion building heavily at distribution junction points. Alternate path recommended.</p>
-                    </div>
-                </div>
-
-                <!-- Card Item 3 (traffic-image4.jpg) -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-white/5 shadow-xl group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/traffic-image4.jpg" alt="Bengaluru Intersection Snapshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 right-3 bg-blue-500/20 backdrop-blur-md text-blue-400 border border-blue-500/30 font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md">
-                            <i class="fas fa-traffic-light mr-1"></i> Extended Signal
-                        </span>
-                    </div>
-                    <div class="p-5 space-y-2">
-                        <div class="flex justify-between items-center text-[11px] text-slate-500 font-bold">
-                            <span>PIN ID: #29375</span>
-                            <span>21 mins ago</span>
-                        </div>
-                        <h4 class="text-base font-bold text-white">Hebbal Flyover Entry Loop</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed">Multi-cycle light hold patterns slowing merging vehicular queues. Use parallel lower service paths.</p>
-                    </div>
+                <div class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-white/10 text-[11px] font-semibold text-slate-300 flex items-center gap-2">
+                    <i class="fas fa-info-circle text-red-400"></i> Click on any bouncing beacon locator to test interaction logs.
                 </div>
             </div>
         </section>
 
-        <!-- 3. TYPOGRAPHY PLUG-IN COMPLIANT TEXT ENGINE (Saves you points in your Viva/Evaluation) -->
         <section id="about" class="bg-slate-900 border border-white/5 rounded-3xl p-6 md:p-10">
             <article class="prose prose-invert max-w-none text-slate-400 prose-sm md:prose-base">
                 <h3 class="text-xl font-bold text-white mb-2">System Concept Validation & Anti-Fraud Infrastructure</h3>
@@ -160,20 +138,36 @@
                     GridlockPulse operates completely via open-source public participation channels. To avoid system manipulation and prevent users from uploading incorrect bottleneck information to misguide other drivers, the upcoming MERN layer implements a two-step validation system. 
                 </p>
                 <p>
-                    First, reports are **GPS proximity-locked** using the browser's live geolocation tracking. This means a driver cannot report a false incident at Silk Board unless they are physically on that street segment. Second, the system features a **Time-To-Live (TTL) Decay algorithm**. All active marker coordinates automatically exhaust and delete themselves from the live map stream after a set timeframe unless continuously verified by other drivers hitting the 👍 validation counter.
+                    First, reports are **GPS proximity-locked** using the browser's live geolocation tracking. This means a driver cannot report a false incident at Silk Board unless they are physically on that street segment. Second, the system features a **Time-To-Live (TTL) Decay algorithm**. All active marker coordinates automatically exhaust and delete themselves from the live map stream after a set timeframe unless continuously verified by other drivers hitting the validation feedback loops.
                 </p>
             </article>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-slate-950 text-slate-600 text-xs border-t border-white/5">
         <div class="container mx-auto max-w-7xl px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <span class="font-bold text-slate-400">GridlockPulse MERN Portfolio Project</span>
             <p>&copy; 2026 Smart City Lab Architecture Assignment. Bengaluru, India.</p>
         </div>
     </footer>
+
+    <script>
+        function showInfo(title, severity, delay, time, notes, imgPath) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-severity').innerText = severity;
+            document.getElementById('modal-delay').innerText = delay;
+            document.getElementById('modal-time').innerText = time;
+            document.getElementById('modal-notes').innerText = notes;
+            document.getElementById('modal-img').src = imgPath;
+            
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+
+        function closeInfo() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+    </script>
 
 </body>
 </html>
