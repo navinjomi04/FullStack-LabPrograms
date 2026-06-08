@@ -3,132 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLR GridlockPulse - Crowdsourced Traffic Hub</title>
+    <title>BLR ClearWayBlr - Crowdsourced Traffic Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght=500;700;900&family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body, p, a, li, article { 
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important; 
+        }
+        h1, h2, h3, h4, span, .font-display { 
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif !important; 
+        }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 selection:bg-red-500 selection:text-white antialiased">
+<body class="text-slate-800 selection:bg-emerald-500 selection:text-white antialiased relative min-h-screen bg-slate-50">
 
-    <header class="bg-slate-950/75 backdrop-blur-xl fixed top-0 left-0 right-0 z-50 border-b border-white/10">
-        <nav class="container mx-auto max-w-7xl flex justify-between items-center p-4 md:px-8">
-            <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-tr from-red-600 to-amber-500 text-white p-2.5 rounded-xl shadow-lg shadow-red-600/20">
-                    <i class="fas fa-traffic-light text-lg"></i>
+    <div class="fixed inset-0 w-full h-full z-0 pointer-events-none grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 gap-1 p-1">
+        <img src="Images/download1.jpg" alt="Bengaluru Landmark 1" class="w-full h-full object-cover opacity-90 contrast-105 brightness-100">
+        <img src="Images/download2.jpg" alt="Bengaluru Landmark 2" class="w-full h-full object-cover opacity-90 contrast-105 brightness-100">
+        <img src="Images/download3.jpg" alt="Bengaluru Landmark 3" class="w-full h-full object-cover opacity-90 contrast-105 brightness-100">
+        <img src="Images/download4.jpg" alt="Bengaluru Landmark 4" class="w-full h-full object-cover opacity-90 contrast-105 brightness-100">
+        <img src="Images/download5.jpg" alt="Bengaluru Landmark 5" class="w-full h-full object-cover opacity-90 contrast-105 brightness-100">
+        <img src="Images/download6.jpg" alt="Bengaluru Landmark 6" class="w-full h-full object-cover opacity-90 contrast-105 brightness-100">
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-50/70 via-slate-50/40 to-slate-50/85"></div>
+    </div>
+
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-slate-200 shadow-sm">
+        <nav class="container mx-auto max-w-7xl flex justify-between items-center p-6 md:px-8">
+            <div class="flex items-center space-x-6">
+                <div class="w-20 h-20 rounded-2xl overflow-hidden shadow-md bg-white p-1.5 flex items-center justify-center border border-slate-200 relative">
+                    <img src="Images/logo.png" alt="ClearWayBlr Logo" class="w-full h-full object-contain z-10 relative bg-white" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="absolute inset-0 hidden items-center justify-center bg-emerald-50 text-emerald-600">
+                        <i class="fas fa-map-location-dot text-3xl"></i>
+                    </div>
                 </div>
-                <span class="text-xl font-black tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                    GridlockPulse
+                <span class="text-4xl md:text-5xl font-black tracking-tight text-[#0a2540] font-display">
+                    clearway<span class="text-emerald-600">Blr</span>
                 </span>
             </div>
             
-            <ul class="hidden md:flex items-center space-x-8 font-semibold text-sm text-slate-300">
-                <li><a href="#hero" class="hover:text-red-400 transition-colors">Home</a></li>
-                <li><a href="report.html" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
-                    <i class="fas fa-map-pin text-red-500 text-xs"></i> Citizen Report Page
+            <ul class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-slate-600">
+                <li><a href="#hero" class="hover:text-emerald-600 transition-colors">Home</a></li>
+                <li><a href="#facts-section" class="hover:text-emerald-600 transition-colors">Facts</a></li>
+                <li><a href="#about-section" class="hover:text-emerald-600 transition-colors">About</a></li>
+                <li><a href="report.html" class="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+                    <i class="fas fa-map-pin text-rose-500 text-xs"></i> Citizen Report Page
                 </a></li>
-                <li><a href="navigate.html" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
-                    <i class="fas fa-route text-emerald-400 text-xs"></i> Plan Journey Page
+                <li><a href="navigate.html" class="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+                    <i class="fas fa-route text-emerald-600 text-xs"></i> Plan Journey Page
                 </a></li>
-                <li><a href="#about" class="hover:text-red-400 transition-colors">About System</a></li>
             </ul>
 
-            <div class="hidden md:block">
-                <a href="navigate.html" class="bg-red-600 hover:bg-red-500 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-all shadow-md shadow-red-600/20">
-                    Bypass Jams
-                </a>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:block">
+                    <a href="navigate.html" class="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold px-6 py-3 rounded-xl transition-all shadow-md shadow-emerald-600/10">
+                        Bypass Jams
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <section id="hero" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <img src="images/traffic-image1.jpg" alt="Bengaluru Cityscape" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.3] contrast-125 scale-100">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/60"></div>
-
-        <div class="relative z-10 text-center max-w-3xl px-4 mx-auto space-y-6">
-            <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/20 text-yellow-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-inner">
-                <i class="fas fa-city mr-1"></i> Namma Bengaluru Transit Network
-            </span>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
+    <section id="hero" class="relative min-h-[70vh] w-full flex items-center justify-center pt-48 pb-12 overflow-hidden z-30 scroll-mt-28">
+        <div class="text-center max-w-3xl px-5 mx-auto space-y-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-[#0a2540] leading-tight font-display drop-shadow-sm">
                 Navigate Bengaluru <br>
-                <span class="bg-gradient-to-r from-red-500 to-amber-400 bg-clip-text text-transparent">On Your Own Terms.</span>
+                <span class="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">On Your Own Terms.</span>
             </h1>
-            <p class="text-slate-300 text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto">
-                A community-led data matrix where drivers share real-time incident updates, cross-verify bottlenecks, and map alternate routes safely.
+            <p class="text-slate-900 bg-white/70 p-4 rounded-xl backdrop-blur-sm inline-block text-sm md:text-base font-semibold max-w-2xl mx-auto leading-relaxed shadow-sm border border-slate-200/50">
+                A community-driven platform within the Bengaluru geofence where drivers and commuters log traffic issues that instantly appear as red markers on the live map, automatically optimizing your journey with alternative routes.
             </p>
-            <div class="flex justify-center gap-4 pt-2">
-                <a href="#showcase" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 font-bold text-sm px-8 py-4 rounded-xl transition-all flex items-center gap-2">
-                    Explore Gallery <i class="fas fa-arrow-down text-xs text-red-400"></i>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="report.html" class="inline-flex items-center justify-center bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs px-6 py-3.5 rounded-xl transition-all tracking-wider font-display uppercase shadow-lg shadow-rose-500/20">
+                    Report Bottleneck
+                </a>
+                <a href="navigate.html" class="inline-flex items-center justify-center bg-[#0a2540] text-white font-bold text-xs px-6 py-3.5 rounded-xl transition-all tracking-wider font-display uppercase shadow-lg shadow-slate-900/20">
+                    Plan Clear Journey
                 </a>
             </div>
         </div>
     </section>
 
-    <main id="showcase" class="container mx-auto max-w-7xl px-4 md:px-8 py-16 space-y-24">
+    <main class="relative z-30 container mx-auto max-w-6xl px-4 md:px-8 pb-24 space-y-12">
+        
+        <div class="flex justify-between items-center w-full px-4 pointer-events-none gap-4">
+            <div class="w-1/2 max-w-xs h-28 md:h-36 rounded-2xl overflow-hidden border-2 border-white shadow-xl rotate-[-4deg] bg-white p-1">
+                <img src="Images/traffic-image1.jpg" alt="Traffic State 1" class="w-full h-full object-cover rounded-xl filter contrast-115">
+            </div>
+            <div class="w-1/2 max-w-xs h-28 md:h-36 rounded-2xl overflow-hidden border-2 border-white shadow-xl rotate-[4deg] bg-white p-1">
+                <img src="Images/traffic-image2.jpg" alt="Traffic State 2" class="w-full h-full object-cover rounded-xl filter contrast-115">
+            </div>
+        </div>
 
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div id="facts-section" class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 scroll-mt-28">
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-md">
+                <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
+                    <i class="fas fa-clock text-amber-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-[#0a2540] font-display mb-2">Lost Time</h3>
+                <p class="text-slate-600 text-sm font-medium leading-relaxed">
+                    The average driver and commuter in Bengaluru loses over 240 hours every year just sitting waiting in heavy peak-hour traffic.
+                </p>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-md">
+                <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center mb-4">
+                    <i class="fas fa-wallet text-rose-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-[#0a2540] font-display mb-2">Wasted Money</h3>
+                <p class="text-slate-600 text-sm font-medium leading-relaxed">
+                    Leaving vehicle engines running in long jams wastes millions of rupees in fuel every single day across the city's main ring roads.
+                </p>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-md">
+                <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                    <i class="fas fa-wind text-blue-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-[#0a2540] font-display mb-2">Dirty Air</h3>
+                <p class="text-slate-600 text-sm font-medium leading-relaxed">
+                    Slow, crawling traffic creates heavy exhaust smoke, which directly ruins the clean air in our neighborhoods.
+                </p>
+            </div>
+        </div>
+
+        <div id="about-section" class="grid grid-cols-1 lg:grid-cols-3 gap-6 scroll-mt-28">
             
-            <div class="space-y-6">
-                <div class="border-l-4 border-emerald-500 pl-4">
-                    <h2 class="text-xl md:text-2xl font-extrabold tracking-tight text-white uppercase">The Garden City Aesthetic</h2>
-                    <p class="text-slate-400 text-xs">Capturing the structural brilliance and vibrant green spaces of our city hub.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="h-64 rounded-2xl overflow-hidden border border-white/15 relative">
-                        <img src="images/traffic-image2.jpg" alt="BLR Landmark View" class="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
-                        <span class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-sm text-[10px] font-bold px-2 py-1 rounded border border-white/10">Architecture</span>
+            <div class="lg:col-span-2 bg-white/95 backdrop-blur-md border border-slate-200 p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+                <div>
+                    <div class="border-b border-slate-100 pb-4 mb-6">
+                        <h2 class="text-2xl font-black text-[#0a2540] font-display">How ClearWayBlr Helps Fix It</h2>
+                        <p class="text-emerald-600 text-sm font-bold uppercase tracking-wider mt-1">Our Collective City Mission</p>
                     </div>
-                    <div class="h-64 rounded-2xl overflow-hidden border border-white/15 relative">
-                        <img src="images/traffic-image2.jpg" alt="BLR Canopy View" class="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
-                        <span class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-sm text-[10px] font-bold px-2 py-1 rounded border border-white/10">Green Corridors</span>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Sharing the Roads Better
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed pl-4">
+                                We tell drivers and commuters about roadblocks ahead of time so they can pick alternate streets and stop roads from getting overloaded.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Commuters Helping Each Other
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed pl-4">
+                                Instead of waiting for slow official updates, everyday drivers and commuters give each other instant updates the second they spot a problem.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Saving Your Fuel Cash
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed pl-4">
+                                Spending less time completely stopped on the road means you don't burn through your fuel or waste money.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Smart and Easy Planning
+                            </h4>
+                            <p class="text-slate-600 text-sm leading-relaxed pl-4">
+                                When you can see where the jams are, you can easily change your travel times or routes to have a stress-free drive.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="border-l-4 border-red-500 pl-4">
-                    <h2 class="text-xl md:text-2xl font-extrabold tracking-tight text-white uppercase">The Gridlock Reality</h2>
-                    <p class="text-slate-400 text-xs">Visual logs of the real-world commuter blockades we aim to solve together.</p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="h-64 rounded-2xl overflow-hidden border border-white/15 relative">
-                        <img src="images/traffic-image3.jpg" alt="Peak Hour Density" class="w-full h-full object-cover filter contrast-110 hover:scale-105 transition duration-300">
-                        <span class="absolute bottom-3 left-3 bg-red-600/90 text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider">Arterial Delay</span>
+            <div class="bg-gradient-to-br from-slate-900 to-[#0a2540] text-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="border-b border-slate-700/50 pb-4">
+                        <h2 class="text-2xl font-black font-display text-white">How to Use This Site</h2>
+                        <p class="text-emerald-400 text-sm font-bold uppercase tracking-wider mt-1">Quick Instructions</p>
                     </div>
-                    <div class="h-64 rounded-2xl overflow-hidden border border-white/15 relative">
-                        <img src="images/traffic-image4.jpg" alt="Peak Hour Tailbacks" class="w-full h-full object-cover filter contrast-110 hover:scale-105 transition duration-300">
-                        <span class="absolute bottom-3 left-3 bg-red-600/90 text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider">Junction Gridlock</span>
-                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Welcome to your community dashboard! This platform relies on live data updates from drivers and commuters to beat traffic gridlocks within Bengaluru.
+                    </p>
+                    <ul class="space-y-2.5 text-sm text-slate-200 font-medium">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Check the live map for active bottlenecks.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Report real-time traffic delays you find.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Bypass blocks using smart path mapping.</span>
+                        </li>
+                    </ul>
                 </div>
+                <a href="#quick-guide-box" class="mt-6 w-full inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs py-3.5 rounded-xl tracking-wider font-display uppercase transition-all shadow-md">
+                    Read the Step Guide <i class="fas fa-arrow-down ml-2"></i>
+                </a>
             </div>
 
-        </section>
+        </div>
 
-        <section id="about" class="bg-slate-900 border border-white/5 rounded-3xl p-6 md:p-10">
-            <article class="prose prose-invert max-w-none text-slate-400 prose-sm md:prose-base">
-                <h3 class="text-xl font-bold text-white mb-2">System Conception & Domain Architecture</h3>
-                <p>
-                    Bengaluru's massive geographic expansion creates intricate transit challenges. This open platform bypasses standard administrative delays by giving community members direct visibility over public streets. By contrasting the inherent structural beauty of the city with the everyday bottlenecks faced by commuters, GridlockPulse provides a direct, user-vouched data network. 
-                </p>
-                <p>
-                    Future updates will introduce live geofenced map links, allowing drivers to pinpoint specific road hazards, vote on delay accuracy, and calculate alternative, dynamic paths around high-volume jams smoothly.
-                </p>
-            </article>
-        </section>
+        <div id="quick-guide-box" class="bg-white/95 backdrop-blur-md border border-slate-200 p-8 rounded-2xl shadow-lg scroll-mt-28">
+            <div class="border-b border-slate-100 pb-4 mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                <div>
+                    <h2 class="text-2xl font-black text-[#0a2540] font-display">Step-by-Step Website Guide</h2>
+                    <p class="text-emerald-600 text-sm font-bold uppercase tracking-wider mt-1">Learn how reporting feeds the map to clear your journey</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-200">
+                    <i class="fas fa-map-pin"></i> Bengaluru Geofence Only (Internal Rides)
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-3 border-r border-slate-100 last:border-0 pr-0 md:pr-4">
+                    <div class="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center">
+                        <i class="fas fa-bullhorn text-rose-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 font-display">1. Report a Bottleneck</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        When drivers and commuters notice a jam, they click <strong class="text-rose-600">"Report Bottleneck"</strong>. Fill in the road name and hit send to warn the community.
+                    </p>
+                </div>
+
+                <div class="space-y-3 border-r border-slate-100 last:border-0 pr-0 md:pr-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-exclamation-triangle text-amber-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 font-display">2. It Becomes a Red Marker</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Once reported, that spot instantly shows up as a <strong class="text-rose-500">Red Marker</strong> on other people's live maps if it falls along their travel path.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+                        <i class="fas fa-route text-emerald-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 font-display">3. Route Optimization</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        When you look at the map, our system checks for those blocks and automatically suggests **alternative routes** with fewer or no red markers, optimizing your trip completely.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center w-full px-4 pointer-events-none gap-4">
+            <div class="w-1/2 max-w-xs h-28 md:h-36 rounded-2xl overflow-hidden border-2 border-white shadow-xl rotate-[3deg] bg-white p-1">
+                <img src="Images/traffic-image3.jpg" alt="Traffic State 3" class="w-full h-full object-cover rounded-xl filter contrast-115">
+            </div>
+            <div class="w-1/2 max-w-xs h-28 md:h-36 rounded-2xl overflow-hidden border-2 border-white shadow-xl rotate-[-3deg] bg-white p-1">
+                <img src="Images/traffic-image4.jpg" alt="Traffic State 4" class="w-full h-full object-cover rounded-xl filter contrast-115">
+            </div>
+        </div>
 
     </main>
 
-    <footer class="bg-slate-950 text-slate-600 text-xs border-t border-white/5">
+    <footer class="relative z-30 bg-white border-t border-slate-200 shadow-inner mt-auto">
         <div class="container mx-auto max-w-7xl px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <span class="font-bold text-slate-400">GridlockPulse MERN Portfolio Project</span>
-            <p>&copy; 2026 Smart City Lab Architecture Assignment. Bengaluru, India.</p>
+            <span class="text-xl font-bold text-[#0a2540] font-display">clearway<span class="text-emerald-600">Blr</span> MERN Portfolio Project</span>
         </div>
     </footer>
 
